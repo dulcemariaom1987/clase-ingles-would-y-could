@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Would & Could: Peticiones formales en inglés</title>
+<style>
+:root{--pink:#ff2e7e;--blue:#2563ff;--yel:#ffb800;--grn:#00a86b;--pur:#7c3aed;--org:#ff6a00;--ink:#1b1b2f;--soft:#eef1ff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+body{margin:0;background:#fff;color:var(--ink);font:20px/1.6 "Segoe UI","Trebuchet MS",system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:#fff;z-index:30}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;gap:8px;overflow-x:auto;padding:10px 12px;background:#fff;border-bottom:3px solid var(--soft)}
+nav a{flex:none;text-decoration:none;color:#fff;font-weight:800;padding:8px 16px;border-radius:999px;font-size:.95rem}
+.hero{text-align:center;padding:40px 16px 20px;max-width:980px;margin:auto}
+.pill{display:inline-block;background:var(--yel);color:#3a2a00;font-weight:800;padding:6px 18px;border-radius:999px;font-size:.95rem}
+h1{font-size:clamp(2.8rem,10vw,5.5rem);line-height:1.05;margin:14px 0;color:var(--blue)}
+h1 span{color:var(--pink)}
+.hero p{font-size:1.15rem;max-width:720px;margin:10px auto}
+.speed{display:inline-flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center;background:var(--soft);padding:10px 16px;border-radius:20px;font-weight:700;font-size:.95rem;margin-top:8px}
+.speed button{font:inherit;border:2px solid var(--blue);background:#fff;color:var(--blue);border-radius:999px;padding:6px 14px;cursor:pointer;font-weight:800}
+.speed button.on{background:var(--blue);color:#fff}
+section{max-width:980px;margin:44px auto;padding:0 16px}
+h2{font-size:clamp(1.9rem,6vw,2.8rem);margin:0 0 6px;line-height:1.15}
+h3{font-size:1.45rem;margin:.3em 0}
+.sub{margin:0 0 16px;color:#46465f}
+.card{--c:var(--soft);border:3px solid var(--c);border-radius:22px;padding:18px;margin:16px 0;box-shadow:0 6px 0 var(--c);background:#fff}
+.en{font-weight:700;color:#1d3fd1}
+.btn{font:inherit;font-weight:800;border:0;border-radius:999px;padding:12px 24px;background:var(--blue);color:#fff;cursor:pointer;box-shadow:0 4px 0 rgba(0,0,0,.22)}
+.btn:active{transform:translateY(3px);box-shadow:none}
+.ghost{background:var(--soft);color:var(--blue)}.alt{background:var(--pur)}.pk{background:var(--pink)}.gn{background:var(--grn)}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:12px 0}
+.spk{flex:none;width:44px;height:44px;border-radius:50%;border:0;background:var(--yel);cursor:pointer;font-size:1.15rem;margin-left:8px;vertical-align:middle}
+.spk:hover{background:#ffcd3d}
+.q{border:3px solid var(--soft);border-radius:18px;padding:14px;margin:14px 0}
+.q.ok{border-color:var(--grn);background:#ecfff7}.q.bad{border-color:var(--pink);background:#fff0f6}
+.opt{display:flex;align-items:center;margin:8px 0}
+.opt label{flex:1;display:flex;gap:12px;align-items:center;padding:12px 14px;border:2px solid #d9defa;border-radius:14px;cursor:pointer}
+.opt input{width:24px;height:24px;accent-color:var(--blue);flex:none}
+.fb{font-weight:800;margin:6px 0;min-height:1.2em}
+.q.ok .fb,.fb.g{color:var(--grn)}.q.bad .fb,.fb.r{color:var(--pink)}
+.score{font-size:1.1rem;color:var(--pur)}
+input.blank{font:inherit;font-weight:700;width:min(200px,50%);margin:0 8px;padding:8px 12px;border:3px solid var(--pur);border-radius:12px;color:var(--ink)}
+textarea{display:block;width:100%;font:inherit;padding:12px;border:3px solid var(--pur);border-radius:14px;resize:vertical;color:var(--ink)}
+input:focus,textarea:focus{outline:4px solid #c9b6ff}
+.hint{margin:0 0 6px;color:#46465f;font-size:.95rem}
+.big{font-size:1.5rem}
+.tile{font:inherit;font-weight:800;border:0;border-radius:12px;padding:10px 14px;background:var(--org);color:#fff;margin:4px;cursor:pointer}
+.ans{min-height:60px;border:3px dashed var(--pur);border-radius:14px;padding:4px;margin:8px 0}
+.tr{background:#fffbe6;border:3px solid var(--yel);border-radius:18px;padding:12px 16px;margin:12px 0}
+.txt{display:flex;align-items:flex-start;gap:6px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.neg{color:#b3003f}
+.cmp{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;padding:10px 0;border-bottom:2px dashed var(--soft)}
+.tip{background:#f2fff9;border-left:8px solid var(--grn);padding:10px 16px;border-radius:12px;margin:10px 0}
+.warn{background:#fff3f8;border-left:8px solid var(--pink);padding:10px 16px;border-radius:12px;margin:10px 0}
+.tarea{background:linear-gradient(135deg,#fff6e0,#ffe9f2);border-radius:28px;padding:20px 14px}
+footer{text-align:center;padding:30px 16px 50px;font-weight:800;color:var(--pur);font-size:1.2rem}
+@media(max-width:600px){body{font-size:18px}.btn{padding:12px 18px}}
+</style>
+</head>
+<body>
+<nav>
+<a href="#teoria" style="background:var(--blue)">📘 Teoría</a><a href="#quiz" style="background:var(--pink)">🧠 Quiz</a><a href="#juegos" style="background:var(--org)">🎮 Juegos</a><a href="#listening" style="background:var(--pur)">🎧 Listening</a><a href="#reading" style="background:var(--grn)">📖 Reading</a><a href="#writing" style="background:#e0a000">✍️ Writing</a><a href="#tarea" style="background:var(--ink)">🏠 Tarea</a>
+</nav>
+
+<header class="hero">
+<span class="pill">Nivel intermedio · B1–B2</span>
+<h1>Would <span>&amp;</span> Could</h1>
+<p><b>Peticiones formales en inglés.</b> Aprende a pedir cosas con cortesía en el trabajo, en hoteles, restaurantes, tiendas y correos electrónicos. ¡Sin prisa, sin límite de tiempo!</p>
+<p>🔊 Toca cualquier botón amarillo para escuchar en inglés americano. Si no oyes nada, sube el volumen y usa Chrome, Edge o Safari.</p>
+<div class="speed">Velocidad del audio: <button type="button" data-r=".72">🐢 Lenta</button><button type="button" data-r=".92" class="on">🚀 Normal</button></div>
+</header>
+
+<section id="teoria">
+<h2 style="color:var(--blue)">📘 1. Teoría</h2>
+<p class="sub">En inglés, una orden directa (“Give me water”) suena brusca. Para pedir algo con educación usamos <b>Could</b> y <b>Would</b>. Equivalen a “¿podrías…?”, “¿serías tan amable de…?”.</p>
+<div class="grid">
+<div class="card" style="--c:var(--blue)"><h3>1. Could you + verbo</h3><p>“¿Podrías…?” Verbo en forma base, sin <i>to</i>.</p><p class="ex">Could you send me the report, please?</p></div>
+<div class="card" style="--c:var(--pink)"><h3>2. Would you + verbo</h3><p>“¿Podrías / serías tan amable de…?” Muy usado en servicios y trabajo.</p><p class="ex">Would you pass me the salt, please?</p></div>
+<div class="card" style="--c:var(--org)"><h3>3. Would you mind + -ing</h3><p>“¿Te importaría…?” Después de <i>mind</i> va un verbo terminado en <b>-ing</b>.</p><p class="ex">Would you mind opening the window?</p></div>
+<div class="card" style="--c:var(--pur)"><h3>4. Would it be possible to + verbo</h3><p>“¿Sería posible…?” Es la opción más formal.</p><p class="ex">Would it be possible to change my room?</p></div>
+<div class="card" style="--c:var(--grn)"><h3>5. I would like / I’d like</h3><p>“Quisiera…” Para pedir algo en una tienda o restaurante.</p><p class="ex">I’d like a glass of water, please.</p></div>
+</div>
+<h3>🔁 De informal a formal</h3>
+<div class="card"><div class="cmp"><span class="ex neg">Give me some water.</span>➜<span class="ex">Could you give me some water, please?</span></div>
+<div class="cmp"><span class="ex neg">Close the door.</span>➜<span class="ex">Would you mind closing the door?</span></div>
+<div class="cmp"><span class="ex neg">I want to talk to the boss.</span>➜<span class="ex">Would it be possible to speak with the manager?</span></div></div>
+<h3>💬 Cómo responder</h3>
+<div class="grid">
+<div class="card" style="--c:var(--grn)"><b>✅ Aceptar</b><p class="ex">Certainly.</p><p class="ex">Of course.</p><p class="ex">Sure, no problem.</p><p class="ex">Not at all.</p></div>
+<div class="card" style="--c:var(--pink)"><b>🙅 Rechazar con educación</b><p class="ex">I’m afraid I can’t.</p><p class="ex">I’m sorry, but I’m busy right now.</p></div>
+</div>
+<div class="tip">💡 <b>Importante:</b> con “Would you mind…?”, la respuesta <i>Not at all</i> significa “no me importa”, o sea, <b>sí lo haré</b>. Evita responder “Yes” porque significaría “sí me importa”.</div>
+<div class="warn">⚠️ <b>Errores comunes:</b> no digas “Could you to open…” (sin <i>to</i>) ni “Would you mind to open…” (usa -ing). Y recuerda añadir <i>please</i> y <i>thank you</i>: ¡suman puntos de cortesía!</div>
+</section>
+
+<section id="quiz">
+<h2 style="color:var(--pink)">🧠 2. Quiz</h2>
+<p class="sub">Elige la opción correcta y pulsa <b>Verificar</b>. No te diremos la respuesta: ¡puedes intentarlo las veces que quieras!</p>
+<div data-mcq="quiz1"></div>
+<h3 style="margin-top:34px">✏️ Completa las frases</h3>
+<p class="sub">Escribe <b>una sola palabra</b> en cada espacio. Toca 🔊 para escuchar la frase.</p>
+<div data-fill="fill1"></div>
+</section>
+
+<section id="juegos">
+<h2 style="color:var(--org)">🎮 3. Juegos</h2>
+<h3>🧩 Juego 1: Ordena la frase</h3>
+<p class="sub">Toca las palabras para formar la petición en inglés que corresponde a la frase en español. Toca una palabra colocada para devolverla.</p>
+<div data-order="o1"></div>
+<h3 style="margin-top:34px">⚡ Juego 2: ¿Formal o informal?</h3>
+<p class="sub">Escucha o lee la frase y decide. ¡Gana un punto si aciertas a la primera!</p>
+<div data-formal="f1"></div>
+</section>
+
+<section id="listening">
+<h2 style="color:var(--pur)">🎧 4. Listening</h2>
+<p class="sub">Escucha un diálogo completo en un hotel. Puedes repetirlo cuantas veces quieras. Intenta responder <b>antes</b> de abrir la transcripción.</p>
+<div data-listen="lis1"></div>
+</section>
+
+<section id="reading">
+<h2 style="color:var(--grn)">📖 5. Reading</h2>
+<p class="sub">Lee la historia (¡o escúchala!) y responde las preguntas de comprensión.</p>
+<div data-read="rd1"></div>
+</section>
+
+<section id="writing">
+<h2 style="color:#c98a00">✍️ 6. Writing</h2>
+<h3>Parte A: Hazlo formal</h3>
+<p class="sub">Reescribe cada orden como una petición educada en inglés usando <i>Could you…</i>, <i>Would you mind…</i> o <i>Would it be possible to…</i>.</p>
+<div data-rw="w1"></div>
+<h3 style="margin-top:34px">Parte B: Escribe tu correo</h3>
+<div data-free="f1"></div>
+</section>
+
+<section id="tarea">
+<div class="tarea">
+<h2 style="color:var(--pink)">🏠 7. Tarea</h2>
+<p class="sub">Práctica para hacer en casa. Todo está aquí, ¡no necesitas buscar nada más!</p>
+<h3>🎧 Listening</h3><div data-listen="lis2"></div>
+<h3 style="margin-top:30px">📖 Reading</h3><div data-read="rd2"></div>
+<h3 style="margin-top:30px">✏️ Completa las frases</h3><div data-fill="fill2"></div>
+<h3 style="margin-top:30px">✍️ Writing</h3>
+<div data-rw="w2"></div>
+<div data-free="f2"></div>
+</div>
+</section>
+<footer>🎉 ¡Excelente trabajo! Keep practicing and stay polite!</footer>
+
+<script>
+"use strict";
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;");
+const norm=s=>s.toLowerCase().replace(/[’‘`]/g,"'").replace(/\s+/g," ").trim().replace(/[.?!,]+$/,"");
+const spk=t=>'<button type="button" class="spk" data-say="'+esc(t)+'" aria-label="Escuchar en inglés" title="Escuchar">🔊</button>';
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+
+/* ---------- DATOS ---------- */
+const MC={
+quiz1:[
+{s:"Estás en una reunión. ¿Cuál es la petición más educada?",o:["Close the window.","Can you close the window?","Would you mind closing the window?"],a:2},
+{q:"Would you mind ___ the door?",s:"Completa:",o:["close","closing","to close"],a:1},
+{q:"Would you mind opening the window?",s:"Respondes que SÍ lo harás con gusto:",o:["Yes, I do mind.","Not at all.","I’m afraid so."],a:1},
+{q:"Would it be possible ___ the deadline?",s:"Completa:",o:["extend","to extend","extending"],a:1},
+{s:"¿Cómo rechazas una petición con cortesía?",o:["No way!","I’m sorry, but I’m afraid I can’t.","I don’t want to."],a:1},
+{q:"I ___ like a wake-up call at seven, please.",s:"Completa (hotel):",o:["would","am","do"],a:0}],
+lis1:[
+{s:"¿Qué habitación recibe el Sr. Brooks?",o:["Room 218","Room 812","Room 128"],a:1},
+{s:"¿Por qué pide un piso más alto?",o:["Because of street noise","Because of the view","Because it’s cheaper"],a:0},
+{s:"¿Dónde está la sala de desayuno?",o:["On the first floor","On the second floor, next to the elevator","On the eighth floor"],a:1},
+{s:"¿Por qué pide una botella de agua?",o:["He has a headache","He is hungry","He wants a shower"],a:0},
+{s:"¿Qué dice la recepcionista sobre los taxis?",o:["They are cheap","They are very busy in the mornings","They only work at night"],a:1},
+{s:"¿Cómo pagará el auto privado?",o:["With cash at the door","With a credit card in the car","It will go on his room bill"],a:2},
+{s:"¿A qué hora necesita el transporte?",o:["6:30","7:45","10:00"],a:1}],
+rd1:[
+{s:"¿Cuál era el problema de Maria?",o:["Her computer stopped working","She lost her job","She missed her flight"],a:0},
+{s:"¿A quién pidió ayuda primero?",o:["Ms. Carter","Mr. Lopez","Tom"],a:1},
+{s:"¿Qué le pidió Maria a su jefa?",o:["To move the presentation to eleven o’clock","To cancel the meeting","To give her a day off"],a:0},
+{s:"¿Qué le pidió Ms. Carter a Maria?",o:["To send a copy of the slides","To buy coffee","To call Tom"],a:0},
+{s:"¿Cuál es el secreto de Maria?",o:["Using could, would, please and thank you","Speaking very fast","Writing long emails"],a:0},
+{s:"Verdadero o falso:",q:"The presentation was at ten o’clock.",o:["True","False"],a:0},
+{s:"Verdadero o falso:",q:"Mr. Lopez refused to help Maria.",o:["True","False"],a:1},
+{s:"Verdadero o falso:",q:"Tom wants to learn how to write polite emails.",o:["True","False"],a:0},
+{s:"Verdadero o falso:",q:"Maria works in a hospital.",o:["True","False"],a:1}],
+lis2:[
+{s:"¿Qué pide el cliente?",o:["A cappuccino and a blueberry muffin","A tea and a sandwich","A coffee and a cake"],a:0},
+{s:"¿Por qué pide bajar la música?",o:["It is too sad","It is too loud for a video call","It hurts his ears"],a:1},
+{s:"¿Dónde está la clave del Wi-Fi?",o:["On the menu","On the table","On the wall"],a:0},
+{s:"¿Cómo debe pagar?",o:["Cash only","By card","By phone"],a:0}],
+rd2:[
+{s:"¿Cuándo es la fiesta?",o:["Next Saturday","Next Sunday","Tomorrow"],a:0},
+{s:"¿Cuántos niños irán aproximadamente?",o:["About fifty","About fifteen","About five"],a:1},
+{s:"¿Qué favor pide Sarah con “could”?",o:["To move their cars","To bring a cake","To babysit"],a:0},
+{s:"Verdadero o falso:",q:"Sarah will be angry if the neighbors can’t move their cars.",o:["True","False"],a:1}]};
+
+const FB={
+fill1:[
+{h:"Petición cortés (hay dos respuestas posibles)",s:"___ you help me with these bags, please?",a:["could","would"]},
+{h:"Would you mind + verbo en -ing",s:"Would you mind ___ me your phone charger?",a:["lending"]},
+{h:"Fórmula muy formal",s:"Would it be ___ to speak with the manager?",a:["possible"]},
+{h:"Quisiera una mesa",s:"I ___ like a table for two, please.",a:["would"]},
+{h:"Aceptando con amabilidad (varias respuestas posibles)",s:"Not at all! I’d be ___ to help.",a:["happy","glad","pleased"]},
+{h:"Rechazando con cortesía",s:"I’m afraid I ___ help you right now.",a:["can't","cannot","can not"]}],
+fill2:[
+{h:"Petición muy cortés con -ing",s:"___ you mind turning off the lights?",a:["would"]},
+{h:"Pedir indicaciones (dos respuestas posibles)",s:"Could you ___ me the way to the station, please?",a:["show","tell"]},
+{h:"¿Sería posible…?",s:"Would it be possible ___ pay by card?",a:["to"]},
+{h:"Aceptando con cortesía",s:"Of ___, I’d be glad to help.",a:["course"]}]};
+
+const OR={o1:[
+{es:"¿Podrías ayudarme con este informe, por favor?",w:"Could you help me with this report, please?"},
+{es:"¿Te importaría abrir la ventana?",w:"Would you mind opening the window?"},
+{es:"¿Sería posible cambiar mi habitación?",w:"Would it be possible to change my room?"},
+{es:"Quisiera una mesa para dos, por favor.",w:"I would like a table for two, please."},
+{es:"Lo siento, pero me temo que no puedo ayudarte.",w:"I’m sorry, but I’m afraid I can’t help you."}]};
+const FM={f1:[
+{t:"Could you possibly send me the file?",f:1},{t:"Give me that pen!",f:0},{t:"Would you mind closing the door?",f:1},{t:"Hey, lend me ten bucks.",f:0},
+{t:"Would it be possible to reschedule the meeting?",f:1},{t:"Wanna grab some coffee?",f:0},{t:"I would like to ask you for some help, please.",f:1},{t:"Hurry up, I’m waiting!",f:0}]};
+
+const DL={
+lis1:[["Emma","Good evening, and welcome to the Grand Maple Hotel. How may I help you?"],
+["Mr. Brooks","Good evening. I have a reservation under the name Brooks."],
+["Emma","Welcome, Mr. Brooks. Yes, I see it here. Two nights in a standard room."],
+["Mr. Brooks","Thank you. Would it be possible to have a room on a higher floor? The street noise bothers me."],
+["Emma","Certainly. I can give you room 812, on the eighth floor."],
+["Mr. Brooks","Perfect. Could you tell me where the breakfast room is?"],
+["Emma","Of course. It’s on the second floor, next to the elevator. Breakfast is served from six thirty to ten."],
+["Mr. Brooks","Wonderful. Would you mind sending a bottle of water to my room? I have a headache."],
+["Emma","Not at all. I’ll send one right away. Would you like some aspirin as well?"],
+["Mr. Brooks","That would be great, thank you. And one more thing: could you possibly book a taxi for seven forty-five tomorrow morning? I have a business meeting downtown."],
+["Emma","I’m afraid taxis are very busy in the mornings, sir, but I can arrange a private car. It costs forty dollars."],
+["Mr. Brooks","That’s fine. Would you mind putting it on my room bill?"],
+["Emma","Certainly. Is there anything else I can do for you?"],
+["Mr. Brooks","No, that’s everything. Thank you so much."],
+["Emma","It’s my pleasure. Enjoy your stay!"]],
+lis2:[["Waiter","Hi, welcome to Sunny Café. What can I get for you?"],
+["Customer","Hi! I’d like a cappuccino and a blueberry muffin, please."],
+["Waiter","Sure. Would you like that for here or to go?"],
+["Customer","For here, please. Also, could you tell me if you have Wi-Fi? I need to finish some work."],
+["Waiter","Of course. The password is on the menu."],
+["Customer","Great. Would you mind turning down the music a little? It’s too loud for my video call."],
+["Waiter","Not at all. I’ll do it right now."],
+["Customer","Thank you! Would it be possible to pay by card?"],
+["Waiter","I’m afraid the card machine isn’t working today. Cash only, sorry."],
+["Customer","No problem. I have some cash."]]};
+
+const RD={
+rd1:{t:"The Email That Changed Maria’s Week",p:[
+"Maria works as an office assistant in a busy marketing company in Chicago. Last Monday, she had a serious problem: her computer stopped working one hour before an important presentation. She felt nervous, but she knew that a polite request could help her.",
+"First, she walked to the IT department and said, “Excuse me, Mr. Lopez. Would you mind taking a quick look at my computer? I have a presentation at ten o’clock.” Mr. Lopez smiled and answered, “Not at all. Let me see what I can do.” Fifteen minutes later, the computer worked again.",
+"Then Maria needed more time to prepare her slides. She wrote an email to her manager, Ms. Carter: “Dear Ms. Carter, would it be possible to move the presentation to eleven o’clock? I would like to review the final slides. Thank you in advance for your understanding.” Ms. Carter replied, “Of course, Maria. Could you also send me a copy of the slides?”",
+"The presentation went very well. After the meeting, Maria’s colleague, Tom, said, “Could you teach me how to write emails like that?” Maria laughed and explained her secret: “I always use could and would, and I never forget to say please and thank you. These small words make people want to help you.”",
+"Maria learned an important lesson that week. In English, the way you ask is often as important as what you ask for. A polite tone opens doors, builds good relationships, and makes everyday work easier."]},
+rd2:{t:"A Note from Apartment 4B",p:[
+"Dear Neighbors, my name is Sarah, and I live in apartment 4B. Next Saturday, I’m having a small birthday party for my daughter. There will be about fifteen children, so it may be a little noisy between two and five in the afternoon. Would you mind being patient with us on that day?",
+"I would also like to ask for a small favor. Could you possibly move your car from the front of the building for a few hours? We need the space for our guests. If it is not possible, please don’t worry. Of course, you are all invited to have some cake! Thank you very much for your understanding. Best wishes, Sarah"]}};
+
+const RW={
+w1:[{i:"Give me your phone number.",k:"number"},{i:"Open the window.",k:"window"},{i:"Send me the file today.",k:"file"},{i:"Help me with this box.",k:"box"}],
+w2:[{i:"Tell me the time.",k:"time"},{i:"Wait here.",k:"wait"},{i:"Bring me the menu.",k:"menu"}]};
+const FR={
+f1:{min:40,n:3,p:"Escribe un <b>correo corto en inglés</b> a tu profesor o jefe pidiendo <b>tres cosas distintas</b> (por ejemplo: cambiar una fecha, recibir un documento, pedir ayuda). Debe tener <b>mínimo 40 palabras</b>, usar <b>3 estructuras formales</b> (Could you…, Would you mind…, Would it be possible…, I would like…) e incluir <i>please</i> o <i>thank you</i>."},
+f2:{min:25,n:2,p:"Escribe un <b>mensaje corto en inglés</b> a un vecino o compañero pidiéndole <b>dos favores</b>. Debe tener <b>mínimo 25 palabras</b>, usar <b>2 estructuras formales</b> (Could you…, Would you mind…, Would it be possible…, I would like…) e incluir <i>please</i> o <i>thank you</i>."}};
+
+/* ---------- AUDIO ---------- */
+let rate=.92,voices=[];
+const TTS="speechSynthesis" in window;
+function loadV(){voices=speechSynthesis.getVoices().filter(v=>/^en[-_]US/i.test(v.lang))}
+if(TTS){loadV();speechSynthesis.onvoiceschanged=loadV}
+function stop(){if(TTS)speechSynthesis.cancel()}
+function speakQ(list){
+ if(!TTS){alert("Tu navegador no permite audio. Prueba con Chrome, Edge o Safari.");return}
+ stop();
+ list.forEach(({t,v})=>{
+  const clean=t.replace(/\bMr\./g,"Mister").replace(/\bMs\./g,"Ms");
+  (clean.match(/[^.!?]+[.!?]*[”"]?/g)||[clean]).forEach(s=>{
+   if(!s.trim())return;
+   const u=new SpeechSynthesisUtterance(s.trim());
+   u.lang="en-US";u.rate=rate;u.pitch=v?0.8:1.1;
+   if(voices.length)u.voice=voices[v%voices.length];
+   speechSynthesis.speak(u)})});
+}
+const say=t=>speakQ([{t,v:0}]);
+document.addEventListener("click",e=>{const b=e.target.closest("[data-say]");if(b)say(b.dataset.say)});
+$$(".speed button").forEach(b=>b.onclick=()=>{rate=+b.dataset.r;$$(".speed button").forEach(x=>x.classList.toggle("on",x===b))});
+
+/* ---------- MÚLTIPLE OPCIÓN ---------- */
+let U=0;
+function mcq(el,items){
+ const u=++U;
+ el.innerHTML=items.map((it,i)=>'<div class="q"><p class="qt"><b>'+(i+1)+'.</b> '+(it.s||"")+" "+(it.q?'<span class="en">'+it.q+"</span>"+spk(it.q):"")+"</p>"+
+  it.o.map((o,j)=>'<div class="opt"><label><input type="radio" name="m'+u+"_"+i+'" value="'+j+'"><span>'+o+"</span></label>"+spk(o)+"</div>").join("")+'<p class="fb"></p></div>').join("")+
+  '<div class="row"><button type="button" class="btn chk">✔ Verificar respuestas</button><button type="button" class="btn ghost rst">↺ Reiniciar</button><b class="score"></b></div>';
+ const qs=$$(".q",el),sc=$(".score",el);
+ el.addEventListener("change",e=>{const q=e.target.closest(".q");if(q){q.classList.remove("ok","bad");$(".fb",q).textContent=""}});
+ $(".chk",el).onclick=()=>{
+  let n=0,blank=0;
+  qs.forEach((q,i)=>{
+   const s=$("input:checked",q),fb=$(".fb",q);
+   q.classList.remove("ok","bad");
+   if(!s){blank++;fb.textContent="👆 Elige una opción.";return}
+   if(+s.value===items[i].a){n++;q.classList.add("ok");fb.textContent="✅ ¡Correcto!"}
+   else{q.classList.add("bad");fb.textContent="❌ Todavía no. ¡Inténtalo otra vez!"}});
+  sc.textContent=blank?"Te faltan "+blank+" por responder.":n===qs.length?"🎉 ¡Excelente! "+n+"/"+qs.length+" correctas":"Vas "+n+"/"+qs.length+". Corrige las marcadas en rojo."};
+ $(".rst",el).onclick=()=>{$$("input",el).forEach(x=>x.checked=false);qs.forEach(q=>{q.classList.remove("ok","bad");$(".fb",q).textContent=""});sc.textContent=""};
+}
+
+/* ---------- COMPLETAR ---------- */
+function fill(el,items){
+ el.innerHTML=items.map((it,i)=>{const p=it.s.split("___");
+  return '<div class="card"><p class="hint">'+(i+1)+". "+it.h+'</p><p class="big"><span class="en">'+p[0]+'</span><input class="blank" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Respuesta '+(i+1)+'"><span class="en">'+p[1]+"</span>"+spk(p[0]+" blank "+p[1])+'</p><p class="fb"></p></div>'}).join("")+
+  '<div class="row"><button type="button" class="btn chk">✔ Verificar</button><button type="button" class="btn ghost rst">↺ Reiniciar</button><b class="score"></b></div>';
+ const cs=$$(".card",el),sc=$(".score",el);
+ $(".chk",el).onclick=()=>{
+  let n=0;
+  cs.forEach((c,i)=>{
+   const inp=$("input",c),fb=$(".fb",c),v=norm(inp.value),p=items[i].s.split("___");
+   if(!v){fb.className="fb";fb.textContent="✍️ Escribe una palabra.";return}
+   if(items[i].a.includes(v)){n++;fb.className="fb g";fb.textContent="✅ ¡Correcto!";$(".spk",c).dataset.say=p[0]+v+p[1]}
+   else{fb.className="fb r";fb.textContent="❌ Todavía no. ¡Inténtalo otra vez!";$(".spk",c).dataset.say=p[0]+" blank "+p[1]}});
+  sc.textContent=n===cs.length?"🎉 ¡Excelente! "+n+"/"+cs.length:"Vas "+n+"/"+cs.length};
+ $(".rst",el).onclick=()=>{cs.forEach((c,i)=>{$("input",c).value="";$(".fb",c).textContent="";const p=items[i].s.split("___");$(".spk",c).dataset.say=p[0]+" blank "+p[1]});sc.textContent=""};
+}
+
+/* ---------- JUEGO: ORDENAR ---------- */
+function gOrder(el,items){
+ el.innerHTML=items.map(it=>'<div class="card" style="--c:var(--org)"><p class="big">🇪🇸 '+it.es+'</p><div class="ans" aria-label="Tu frase"></div><div class="pool"></div><div class="row"><button type="button" class="btn chk">✔ Verificar</button><button type="button" class="btn ghost rst">↺ Reiniciar</button><span class="fb"></span></div></div>').join("");
+ $$(".card",el).forEach((c,i)=>{
+  const it=items[i],pool=$(".pool",c),ans=$(".ans",c),fb=$(".fb",c);
+  const reset=()=>{pool.innerHTML="";ans.innerHTML="";fb.textContent="";fb.className="fb";
+   shuffle(it.w.split(" ")).forEach(w=>{const b=document.createElement("button");b.type="button";b.className="tile";b.textContent=w;pool.append(b)})};
+  reset();
+  c.addEventListener("click",e=>{const t=e.target.closest(".tile");if(!t)return;say(t.textContent);(t.parentNode===pool?ans:pool).append(t);fb.textContent=""});
+  $(".rst",c).onclick=reset;
+  $(".chk",c).onclick=()=>{
+   const ws=$$(".tile",ans).map(t=>t.textContent);
+   if(ws.length<it.w.split(" ").length){fb.className="fb r";fb.textContent="👆 Usa todas las palabras.";return}
+   if(norm(ws.join(" "))===norm(it.w)){fb.className="fb g";fb.innerHTML="✅ ¡Perfecto! "+spk(it.w)}
+   else{fb.className="fb r";fb.textContent="❌ Todavía no. ¡Inténtalo otra vez!"}};
+ });
+}
+
+/* ---------- JUEGO: FORMAL / INFORMAL ---------- */
+function gFormal(el,items){
+ let i=0,pts=0,tries=0,order=shuffle(items);
+ const draw=()=>{
+  if(i>=order.length){
+   el.innerHTML='<div class="card" style="--c:var(--grn)"><h3>🏁 ¡Terminaste!</h3><p class="big">Puntos: <b>'+pts+"</b> de "+order.length+'</p><button type="button" class="btn gn" id="gf-r">↺ Jugar otra vez</button></div>';
+   $("#gf-r",el).onclick=()=>{i=0;pts=0;order=shuffle(items);draw()};return}
+  const it=order[i];tries=0;
+  el.innerHTML='<div class="card" style="--c:var(--pur)"><p>Frase '+(i+1)+" de "+order.length+" · ⭐ "+pts+'</p><p class="big en">“'+it.t+"”"+spk(it.t)+'</p><p>¿Es formal o informal?</p><div class="row"><button type="button" class="btn" data-f="1">🎩 Formal</button><button type="button" class="btn pk" data-f="0">😎 Informal</button></div><p class="fb r"></p></div>';
+  $$("[data-f]",el).forEach(b=>b.onclick=()=>{
+   if((b.dataset.f==="1")===!!it.f){if(!tries)pts++;i++;draw()}
+   else{tries++;$(".fb",el).textContent="❌ Casi… ¡inténtalo otra vez!"}})};
+ draw();
+}
+
+/* ---------- LISTENING / READING ---------- */
+function listen(el,key){
+ const L=DL[key],first=L[0][0];
+ el.innerHTML='<div class="card" style="--c:var(--pur)"><div class="row"><button type="button" class="btn alt play">▶ Escuchar diálogo</button><button type="button" class="btn ghost stp">⏹ Detener</button><button type="button" class="btn pk tg">📄 Mostrar transcripción</button></div><div class="tr" hidden>'+
+  L.map(l=>'<p class="txt"><span><b>'+l[0]+':</b> <span class="en">'+l[1]+"</span></span>"+spk(l[1])+"</p>").join("")+'</div></div><div class="mc"></div>';
+ $(".play",el).onclick=()=>speakQ(L.map(l=>({t:l[1],v:l[0]===first?0:1})));
+ $(".stp",el).onclick=stop;
+ const tr=$(".tr",el),tg=$(".tg",el);
+ tg.onclick=()=>{tr.hidden=!tr.hidden;tg.textContent=tr.hidden?"📄 Mostrar transcripción":"🙈 Ocultar transcripción"};
+ mcq($(".mc",el),MC[key]);
+}
+function read(el,key){
+ const r=RD[key];
+ el.innerHTML='<div class="card" style="--c:var(--grn)"><h3 class="en">'+r.t+'</h3><div class="row"><button type="button" class="btn gn play">▶ Escuchar todo el texto</button><button type="button" class="btn ghost stp">⏹ Detener</button></div>'+
+  r.p.map(p=>'<p class="txt"><span>'+p+"</span>"+spk(p)+"</p>").join("")+'</div><div class="mc"></div>';
+ $(".play",el).onclick=()=>speakQ(r.p.map(t=>({t,v:0})));
+ $(".stp",el).onclick=stop;
+ mcq($(".mc",el),MC[key]);
+}
+
+/* ---------- WRITING ---------- */
+const FORM=/^(could|would) you\b|^would it be possible\b|^i would like\b|^i'd like\b|^could i\b/;
+function rewrite(el,items){
+ el.innerHTML=items.map((it,i)=>'<div class="card" style="--c:#ffd66b"><p><b>'+(i+1)+'.</b> <span class="en">'+it.i+"</span>"+spk(it.i)+'</p><textarea rows="2" placeholder="Escribe aquí tu versión formal en inglés…"></textarea><div class="row"><button type="button" class="btn chk">✔ Verificar</button><span class="fb"></span></div></div>').join("");
+ $$(".card",el).forEach((c,i)=>{
+  const it=items[i],ta=$("textarea",c),fb=$(".fb",c);
+  $(".chk",c).onclick=()=>{
+   const v=norm(ta.value);let m,ok=false;
+   if(!v)m="✍️ Escribe tu respuesta primero.";
+   else if(!FORM.test(v))m="❌ Empieza con una estructura formal: Could you…, Would you mind…, Would it be possible to… o I would like…";
+   else if(/^would you mind/.test(v)&&!/^would you mind (if|not|\w+ing)\b/.test(v))m="❌ Después de Would you mind usa un verbo terminado en -ing.";
+   else if(!v.includes(it.k))m="❌ Mantén la misma idea del mensaje original.";
+   else if(v.split(" ").length<5)m="❌ Tu petición es muy corta; complétala.";
+   else{ok=true;m="✅ ¡Muy bien! Suena formal y educado. "+spk(ta.value)}
+   fb.className="fb "+(ok?"g":"r");fb.innerHTML=m};
+ });
+}
+function free(el,f){
+ el.innerHTML='<div class="card" style="--c:var(--grn)"><p>'+f.p+'</p><textarea rows="7" placeholder="Escribe aquí tu mensaje en inglés…"></textarea><p class="cnt">Palabras: 0</p><div class="row"><button type="button" class="btn gn chk">✔ Verificar</button></div><div class="fb"></div></div>';
+ const ta=$("textarea",el),cnt=$(".cnt",el),fb=$(".fb",el);
+ const words=()=>ta.value.trim().split(/\s+/).filter(Boolean).length;
+ ta.oninput=()=>{cnt.textContent="Palabras: "+words()};
+ $(".chk",el).onclick=()=>{
+  const v=norm(ta.value),w=words();
+  if(!w){fb.className="fb r";fb.textContent="✍️ Escribe tu mensaje primero.";return}
+  const n=(v.match(/\b(could you|would you|would it be possible|i would like|i'd like)\b/g)||[]).length,pol=/\b(please|thank)/.test(v);
+  const ok=w>=f.min&&n>=f.n&&pol;
+  fb.className="fb "+(ok?"g":"r");
+  fb.innerHTML=(w>=f.min?"✅":"⬜")+" Palabras: "+w+"/"+f.min+"<br>"+(n>=f.n?"✅":"⬜")+" Estructuras formales: "+Math.min(n,f.n)+"/"+f.n+"<br>"+(pol?"✅":"⬜")+" Usaste please o thank you"+(ok?"<br>🎉 ¡Excelente trabajo! "+spk(ta.value):"<br>Ajusta lo que falta y vuelve a verificar.");
+ };
+}
+
+/* ---------- INICIO ---------- */
+$$(".ex").forEach(e=>{const t=e.textContent;e.insertAdjacentHTML("beforeend",spk(t))});
+$$("[data-mcq]").forEach(e=>mcq(e,MC[e.dataset.mcq]));
+$$("[data-fill]").forEach(e=>fill(e,FB[e.dataset.fill]));
+$$("[data-order]").forEach(e=>gOrder(e,OR[e.dataset.order]));
+$$("[data-formal]").forEach(e=>gFormal(e,FM[e.dataset.formal]));
+$$("[data-listen]").forEach(e=>listen(e,e.dataset.listen));
+$$("[data-read]").forEach(e=>read(e,e.dataset.read));
+$$("[data-rw]").forEach(e=>rewrite(e,RW[e.dataset.rw]));
+$$("[data-free]").forEach(e=>free(e,FR[e.dataset.free]));
+</script>
+</body>
+</html>
